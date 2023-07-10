@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Imagem Arco e Imagem Arredondada</title>
   <link rel="stylesheet" href="css/star.css">
   <style>
     @font-face {
@@ -77,9 +75,7 @@
 
     }
 
-    .background-brilho {
-      z-index: -2
-    }
+  
     footer{
     position: fixed;
     bottom: 0;
@@ -90,16 +86,13 @@
 
 <body>
   <div id="nc-main" class="nc-main bg-cover bg-cc">
-
     <div class="full-wh">
-
-      <!-- STAR ANIMATION -->
       <div class="bg-animation">
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>
         <div id='stars4'></div>
-      </div><!-- / STAR ANIMATION -->
+      </div>
 
     </div>
   </div>
@@ -122,16 +115,11 @@
         const peopleName =  localStorage.getItem('peopleName');
      document.getElementsByClassName('arco-title')[0].innerText = peopleName;
      document.getElementsByClassName('estudante')[0].innerText = peopleName;
-     document.querySelector('#container-arco-img').src =  localStorage.getItem('peopleImg')
+     document.querySelector('#container-arco-img').src =  localStorage.getItem('peopleImg');
     
     }
-    
-
     }
-    getLocalStorage()
-
-     
-
+    getLocalStorage();
   </script>
 </body>
 
