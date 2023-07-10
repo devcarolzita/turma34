@@ -50,12 +50,13 @@
 <body>
   <h3>Selecione abaixo suas informações</h3> 
   <form action="index2.html" method="post" id="infoTemplate">
+    <p>Se atente no link em ter .png ou .jpg</p>
     <label for="imagem">URL da imagem:</label>
     <input type="text" id="infoTemplateImagem" name="imagem" required><br><br>
 
     <label for="personSelect">Estudante:</label>
     <select id="personSelect" name="estudante" required>
-        <option value="">Selecione um estudante</option>
+        <option value="">Selecione seu nome</option>
         <option value="Amanda Barros">Amanda Barros</option>
   <option value="Ana Lacerda">Ana Lacerda</option>
   <option value="Arley Pereira">Arley Pereira</option>
@@ -140,6 +141,27 @@
   <option value="Pedro Souza">Pedro Souza</option>
   <option value="Rafael Silva">Rafael Silva</option>
   <option value="Rafael Gueds">Rafael Gueds</option>
+  <option value="Régis Matioli Júnior">Régis Matioli Júnior</option>
+  <option value="Rhenan Correa">Rhenan Correa</option>
+  <option value="Rian Seabra">Rian Seabra</option>
+  <option value="Ricardo Bomtempo">Ricardo Bomtempo</option>
+  <option value="Romulo Pereira">Romulo Pereira</option>
+  <option value="Rubens Almeida">Rubens Almeida</option>
+  <option value="Stephany Carmo">Stephany Carmo</option>
+  <option value="Tadeu Filho">Tadeu Filho</option>
+  <option value="Thalys Zimmermann">Thalys Zimmermann</option>
+  <option value="Thiago Hermont">Thiago Hermont</option>
+  <option value="Thiago Silva">Thiago Silva</option>
+  <option value="Tiago Vieira">Tiago Vieira</option>
+  <option value="Victor Contadini">Victor Contadini</option>
+  <option value="Victor Correa">Victor Correa</option>
+  <option value="Victor Leichsenring">Victor Leichsenring</option>
+  <option value="Vinicius Emidio">Vinicius Emidio</option>
+  <option value="Vinicius Santos">Vinicius Santos</option>
+  <option value="Vinicius Fernandes">Vinicius Fernandes</option>
+  <option value="Wagner Junior">Wagner Junior</option>
+  <option value="Wesley Guedes">Wesley Guedes</option>
+  <option value="Wesley Silva">Wesley Silva</option>
     </select><br><br>
 
     <input type="submit" id="generateTemplate" value="Enviar">
@@ -149,6 +171,9 @@
       localStorage.setItem('peopleImg', document.querySelector('#infoTemplateImagem').value);
       localStorage.setItem('peopleName', document.querySelector('#personSelect').value);
     })
+    document.querySelector('form').addEventListener('submit', function() {
+    window.location.href = 'index2.html';
+  });
   </script>
 </body>
 </html>
