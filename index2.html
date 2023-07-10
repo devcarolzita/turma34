@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Imagem Arco e Imagem Arredondada</title>
+  <link rel="stylesheet" href="css/star.css">
+  <style>
+    @font-face {
+      font-family: "Boston";
+      src: url("fonts/Boston\ Angel\ Regular.ttf") format("truetype");
+    }
+
+    body {
+      font-family: "Boston", sans-serif;
+      background-color: black;
+
+    }
+
+    .container {
+      background-image: url(brilho.png);
+    }
+
+    .container-arco {
+      position: relative;
+      display: inline-block;
+      margin-left: 200px;
+    }
+
+    .arco {
+      display: block;
+      width: 400px;
+      height: 300px;
+    }
+
+    .imagem-arredondada {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+    .arco-title {
+      position: absolute;
+      top: 85%;
+      left: 39%;
+    }
+
+    .arco-subtitle, .subtitle {
+      color: #FDE48B;
+
+    }
+
+    .arco-subtitle {
+      position: absolute;
+      top: 95%;
+      left: 39%;
+    }
+
+    .skills-section {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+    }
+
+    .skills-section-img {
+      width: 90%;
+    }
+
+    .title {
+      text-transform: uppercase;
+      color: #FDE48B;
+      text-align: center;
+      font-size: 80px;
+
+    }
+
+    .background-brilho {
+      z-index: -2
+    }
+    footer{
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nc-main" class="nc-main bg-cover bg-cc">
+
+    <div class="full-wh">
+
+      <!-- STAR ANIMATION -->
+      <div class="bg-animation">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='stars4'></div>
+      </div><!-- / STAR ANIMATION -->
+
+    </div>
+  </div>
+
+  <h1 class="title">Parabéns, <span class="estudante"> Carolzita </span></h1>
+  <div class="container-arco">
+    <img src="arco.png" alt="Arco" class="arco">
+    <img src="perfil.png" alt="Imagem Arredondada" class="imagem-arredondada" id="container-arco-img">
+    <h3 class="arco-title">Carol silva</h3>
+    <h4 class="arco-subtitle">Turma 34</h4>
+  </div>
+  <div class="skills-section">
+    <img src="textos.png" alt="">
+  </div>
+  </div>
+  <footer> <a class="subtitle"  href="https://github.com/devcarolzita" target="_blank">Desenvolvido por Carolzita</a></footer>
+  <script>
+    const getLocalStorage = () => {
+      if(localStorage.getItem('peopleName').length !== 0){
+        const peopleName =  localStorage.getItem('peopleName');
+     document.getElementsByClassName('arco-title')[0].innerText = peopleName;
+     document.getElementsByClassName('estudante')[0].innerText = peopleName;
+     document.querySelector('#container-arco-img').src =  localStorage.getItem('peopleImg')
+    
+    }
+    
+
+    }
+    getLocalStorage()
+
+     
+
+  </script>
+</body>
+
+</html>

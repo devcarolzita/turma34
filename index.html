@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seletor de Pessoa</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    #person-select {
+      margin-bottom: 10px;
+    }
+    
+    #person-photo {
+      display: none;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+
+    .skills-section {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      justify-content: end;
+      padding-left: 20px;
+    }
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20px;
+      color: #555;
+    }
+
+    .skill-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .skill-label {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    
+  </style>
+  </style>
+</head>
+<body>
+  <div class="laurel-arc"></div>
+
+  <h1>Parabéns <span> Carol</span> pela a entrega do projeto sobre testes unitários!</h1>
+
+  <!-- <h3>Selecione abaixo suas informações</h3>
+  <select id="person-select">
+    <option value="">Selecione seu nome</option>
+    <option value="person1">Pessoa 1</option>
+    <option value="person2">Pessoa 2</option>
+    <option value="person3">Pessoa 3</option>
+  </select>
+  <input type="text" id="urlInput" placeholder="Cole a URL da imagem aqui">
+
+  <div id="person-photo"></div> -->
+  <!-- <button id="generateTemplate">Gerar meu template</button> -->
+
+  <form action="index2.html" method="post" id="infoTemplate">
+    <label for="imagem">URL da imagem:</label>
+    <input type="text" id="infoTemplateImagem" name="imagem" required><br><br>
+
+    <label for="personSelect">Estudante:</label>
+    <select id="personSelect" name="estudante" required>
+        <option value="">Selecione um estudante</option>
+        <option value="estudante1">Estudante 1</option>
+        <option value="estudante2">Estudante 2</option>
+        <option value="estudante3">Estudante 3</option>
+    </select><br><br>
+
+    <input type="submit" id="generateTemplate" value="Enviar">
+</form>
+  <script>
+    document.getElementById('generateTemplate').addEventListener('click', function () {
+      localStorage.setItem('peopleImg', document.querySelector('#infoTemplateImagem').value);
+      localStorage.setItem('peopleName', document.querySelector('#personSelect').value);
+    })
+  </script>
+</body>
+</html>
