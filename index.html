@@ -165,14 +165,13 @@
     </select><br><br>
 
     <!-- <input type="submit" id="generateTemplate" value="Enviar"> -->
-    <a href="index2.html" target="_blank" id="generateTemplate" ><button>Ir para a página 2</button></a>
+   <button>Ir para a página 2</button>
 
 </form>
   <script>
     document.getElementById('generateTemplate').addEventListener('click', function () {
       localStorage.setItem('peopleImg', document.querySelector('#infoTemplateImagem').value);
       localStorage.setItem('peopleName', document.querySelector('#personSelect').value);
-      window.location.href = 'index2.html';
 
     })
    
