@@ -171,7 +171,8 @@
       localStorage.setItem('peopleImg', document.querySelector('#infoTemplateImagem').value);
       localStorage.setItem('peopleName', document.querySelector('#personSelect').value);
     })
-    document.querySelector('form').addEventListener('submit', function() {
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
     window.location.href = 'index2.html';
   });
   </script>
