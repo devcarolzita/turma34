@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Boston";
+  src: url("../fonts/Boston\ Angel\ Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Boston", sans-serif;
+  background-color: black;
+
+}
+
+.container {
+  background-image: url(brilho.png);
+}
+
+.container-arco {
+  position: relative;
+  display: inline-block;
+  margin-left: 200px;
+}
+
+.arco {
+  display: block;
+  width: 400px;
+  height: 300px;
+}
+
+.imagem-arredondada {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.arco-title {
+  position: absolute;
+  top: 85%;
+  left: 39%;
+}
+
+.arco-subtitle, .subtitle {
+  color: #FDE48B;
+
+}
+
+.arco-subtitle {
+  position: absolute;
+  top: 95%;
+  left: 39%;
+}
+
+.skills-section {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+}
+
+.skills-section-img {
+  width: 90%;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #FDE48B;
+  text-align: center;
+  font-size: 80px;
+
+}
+
+
+footer{
+position: fixed;
+bottom: 0;
+margin: 0 auto;
+}

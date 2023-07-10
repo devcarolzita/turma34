@@ -3,56 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/star.css">
+  <link rel="stylesheet" href="css/styleIndex.css">
   <title>Projeto unit test</title>
-  <style>
-    h1{
-      text-align: center;
-    }
-    #person-select {
-      margin-bottom: 10px;
-    }
-    
-    #person-photo {
-      display: none;
-      width: 200px;
-      height: 200px;
-      border: 1px solid black;
-    }
-
-    .skills-section {
-      display: flex;
-      align-items: center;
-      height: 100vh;
-      justify-content: end;
-      padding-left: 20px;
-    }
-
-    .skill {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 20px;
-      color: #555;
-    }
-
-    .skill-icon {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .skill-label {
-      font-size: 14px;
-      text-align: center;
-    }
-  
-    
-  </style>
-  </style>
 </head>
 <body>
-  <h3>Selecione abaixo suas informações</h3> 
+  <div id="nc-main" class="nc-main bg-cover bg-cc">
+    <div class="full-wh">
+      <div class="bg-animation">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='stars4'></div>
+      </div>
+    </div>
+  </div>
+  <h1 class="titles">Gerador de template para linkedin</h1>
+  <h3  class="titles">Selecione abaixo suas informações</h3> 
   <form action="./index2" method="POST" id="infoTemplate" data-netlify="true">
-    <p>Se atente no link em ter .png ou .jpg</p>
+    <p  class="titles">Se atente no link em ter .png ou .jpg</p>
     <label for="imagem">URL da imagem:</label>
     <input type="text" id="infoTemplateImagem" name="imagem" required><br><br>
 
@@ -167,7 +136,7 @@
     </select><br><br>
 
     <!-- <input type="submit" id="generateTemplate" value="Enviar"> -->
-   <button>Ir para a página 2</button>
+   <button>Gerar template</button>
 
 </form>
   <script>
