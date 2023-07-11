@@ -16,7 +16,7 @@ body {
 .container-arco {
   position: relative;
   display: inline-block;
-  margin-left: 200px;
+  margin-left: 10%;
 }
 
 .arco {
@@ -30,15 +30,15 @@ body {
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  width: 60%;
+  height: 70%;
   border-radius: 50%;
 }
 
 .arco-title {
   position: absolute;
   top: 85%;
-  left: 39%;
+  left: 33%;
 }
 
 .arco-subtitle, .subtitle {
@@ -66,13 +66,97 @@ body {
   text-transform: uppercase;
   color: #FDE48B;
   text-align: center;
-  font-size: 80px;
+  font-size:4rem;
 
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
 
+.notification {
+  position: relative;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  z-index: 99999;
+  background-color: #4CAF50;
+  color: #fff;
+}
 footer{
 position: fixed;
 bottom: 0;
 margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+  .skills-section-img{
+    width: 80%;
+  }
+  .arco {
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+  }
+  .imagem-arredondada {
+    width: 37%;
+    }
+}
+
+
+@media screen and (max-width: 999px){
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-section{
+    position: unset;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+
+  }
+  .container-arco{
+    margin-left: 0;
+  }
+  .arco{
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+  }
+  .imagem-arredondada{
+    left: 50%;
+  }
+  .arco-title{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width:999px){
+  .imagem-arredondada{
+    width: 51%;
+    height: 73%;
+  }
+  .arco-title {
+    font-size: 1.5rem;
+    margin-left: 13px;
+}
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px){
+  .container-arco{
+    margin-left: 0;
+  }
 }

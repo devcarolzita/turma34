@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="stylesheet" href="css/star.css">
   <link rel="stylesheet" href="css/styleIndex2.css">
   <title>Projeto unit test</title>
@@ -29,22 +30,42 @@
     <h4 class="arco-subtitle">Turma 34</h4>
   </div>
   <div class="skills-section">
-    <img src="textos.png" alt="">
+    <img class="skills-section-img" src="textos.png" alt="">
   </div>
   </div>
-  <footer> <a class="subtitle"  href="https://github.com/devcarolzita" target="_blank">Desenvolvido por Carolzita</a></footer>
+  <!-- <footer> <a class="subtitle"  href="https://github.com/devcarolzita" target="_blank">Desenvolvido por Carolzita</a></footer> -->
   <script>
+    // alert('Tire um print da tela, em breve botão de download')
     const getLocalStorage = () => {
-      if(localStorage.getItem('peopleName').length !== 0){
+      if(localStorage.getItem('peopleName')){
         const peopleName =  localStorage.getItem('peopleName');
      document.getElementsByClassName('arco-title')[0].innerText = peopleName;
      document.getElementsByClassName('estudante')[0].innerText = peopleName;
-     document.querySelector('#container-arco-img').src =  localStorage.getItem('peopleImg');
-    
+     document.querySelector('#container-arco-img').src =  localStorage.getItem('peopleImg') !== null ? localStorage.getItem('peopleImg') : 'perfil.png';
     }
     }
     getLocalStorage();
-   
+    const showNotification = (message) => {
+  const popUpNotification = document.createElement('div');
+  popUpNotification.classList.add('overlay');
+
+  const notification = document.createElement('p');
+  notification.classList.add('notification');
+  notification.textContent = message;
+
+  let btnNotification = document.createElement('button');
+  btnNotification.textContent = 'OK';
+
+  btnNotification.addEventListener('click', function () {
+    popUpNotification.remove();
+  })
+
+  notification.appendChild(btnNotification)
+  popUpNotification.appendChild(notification)
+  document.body.appendChild(popUpNotification);
+}
+showNotification('Tire um print da tela, em breve botão de download')
+
   </script>
 </body>
 
