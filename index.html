@@ -123,7 +123,7 @@
       localStorage.setItem('peopleName', document.querySelector('#personSelect').value);
     })
 
-    document.getElementById('inputImg').addEventListener('click', function () {
+    document.getElementById('inputImg').addEventListener('change', function () {
       const file = document.querySelector("input[type=file]").files[0];
       const reader = new FileReader();
 
